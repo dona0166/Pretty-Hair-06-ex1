@@ -13,21 +13,16 @@ namespace PrettyHairLibrary
         private string deliveryDate;
         private string orderDate;
         OrderRepository or = new OrderRepository();
-        private long generator_result;
-       
-        public long OrderId
-        {
-            get { return or.GeneratorResult; }
-            private set { this.generator_result = value; }
-        }
-        
+        public long OrderId { get; set; }
 
-        public Order(int orderid, string dd, string od, Dictionary<ProductType, int> ol)
+
+        public Order(string dd, string od, Dictionary<ProductType, int> ol)
         {
+            
             orderlines = ol;
             deliveryDate = dd;
             orderDate = od;
-            this.OrderId = orderid;
+            this.OrderId = or.GeneratorResult;
         }
 
         public bool CheckQuantity()

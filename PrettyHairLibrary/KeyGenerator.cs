@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace PrettyHairLibrary
 {
-    interface IKeyGenerator
+    public class IKeyGenerator
     {
-        long NextKey();
+
+        public long NextKey();
     }
 }

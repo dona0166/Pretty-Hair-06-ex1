@@ -9,9 +9,13 @@ namespace PrettyHairLibrary
     public class RandomGenerator : IKeyGenerator
     {
         Random r = new Random();
+        long result;
         public long NextKey()
-        {
-            return r.Next(1000);
+        {   
+            result = r.Next(1000);
+            Console.WriteLine("The next id is " + result);
+            Console.ReadKey();
+            return result;
         }
     }
 }

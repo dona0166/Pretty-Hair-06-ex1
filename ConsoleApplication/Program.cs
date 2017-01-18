@@ -15,7 +15,7 @@ namespace CLI
         private ProductTypeRepository pr = new ProductTypeRepository();
         private OrderRepository or = new OrderRepository();
         private Menu m;
-        IKeyGenerator generator;
+        KeyGenerator generator;
         
 
 
@@ -94,14 +94,17 @@ namespace CLI
                     case 1:
                         generator = new DateGenerator();
                         or.GeneratorResult = generator.NextKey();
+                        running = false;
                         break;
                     case 2:
                         generator = new RandomGenerator();
                         or.GeneratorResult = generator.NextKey();
+                        running = false;
                         break;
                     case 3:
                         generator = new IncrementalGenerator();
                         or.GeneratorResult = generator.NextKey();
+                        running = false;
                         break;
                     case 0:
                         running = false;

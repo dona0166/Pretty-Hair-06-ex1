@@ -8,9 +8,14 @@ namespace PrettyHairLibrary
 {
     public class DateGenerator : IKeyGenerator
     {
+        public long result;
         public long NextKey()
         {
-            return long.Parse(DateTime.Now.ToString("yyyyMMddHHmmss"));
+
+            result = long.Parse(DateTime.Now.ToString("yyyyMMddHHmmss"));
+            Console.WriteLine("The next id is " + result);
+            Console.ReadKey();
+            return result;
         }
     }
 }

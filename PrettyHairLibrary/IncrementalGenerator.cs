@@ -9,9 +9,13 @@ namespace PrettyHairLibrary
     public class IncrementalGenerator : IKeyGenerator
     {
         OrderRepository neworder = new OrderRepository();
+        long result;
         public long NextKey()
         {
-            return neworder.GetOrderList().Count() + 1;
+            result = neworder.GetOrderList().Count() + 1;
+            Console.WriteLine("The next id is " + result);
+            Console.ReadKey();
+            return result;
         }
     }
 }
