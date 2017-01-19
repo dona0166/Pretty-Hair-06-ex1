@@ -1,0 +1,23 @@
+﻿<Window x:Class="GUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="600">
+    <Grid>
+        <Label HorizontalAlignment="Center">MENU</Label>
+        <StackPanel VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Left">
+                <Button Name="allproducts" Click="allproducts_Click">View all products</Button>
+                <Button Name="updateproducts">Update products</Button>
+                <Button Name="choosekey">Choose Key Generator</Button>
+                <Button Name="close">Exit</Button>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Right">
+                <TextBox Height="100" Width="100"></TextBox>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

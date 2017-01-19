@@ -15,7 +15,7 @@ namespace CLI
         private ProductTypeRepository pr = new ProductTypeRepository();
         private OrderRepository or = new OrderRepository();
         private Menu m;
-        KeyGenerator generator;
+        IKeyGenerator generator;
         
 
 
