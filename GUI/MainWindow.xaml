@@ -8,16 +8,15 @@
         Title="MainWindow" Height="600" Width="600">
     <Grid>
         <Label HorizontalAlignment="Center">MENU</Label>
-        <StackPanel VerticalAlignment="Center">
+        <StackPanel VerticalAlignment="Center" Margin="48,128,346,361">
             <StackPanel HorizontalAlignment="Left">
                 <Button Name="allproducts" Click="allproducts_Click">View all products</Button>
                 <Button Name="updateproducts">Update products</Button>
                 <Button Name="choosekey">Choose Key Generator</Button>
                 <Button Name="close">Exit</Button>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Right">
-                <TextBox Height="100" Width="100"></TextBox>
-            </StackPanel>
+            <StackPanel HorizontalAlignment="Right"/>
         </StackPanel>
+        <TextBox Margin="169,102,74,315"/>
     </Grid>
 </Window>
